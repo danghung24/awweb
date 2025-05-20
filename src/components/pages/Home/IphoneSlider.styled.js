@@ -1,38 +1,66 @@
 import styled from "styled-components";
+import { Theme } from "../../../assets/styels/Theme";
 
 export const SliderWrapper = styled.div`
   position: relative;
   padding: 24px;
-  background: #333;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: ${Theme.backgrond};
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+`;
+
+export const TitleBarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+`;
+
+export const TitleText = styled.h2`
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 `;
 
 export const SliderContent = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  flex: 1;
 `;
 
 export const Card = styled.div`
+  width: 250px;
+  height: 400px;
   background: #222;
   padding: 16px;
   border-radius: 16px;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  }
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: auto;
-  margin-bottom: 12px;
+  width: 125px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto;
 `;
 
-export const Title = styled.div`
+export const ProductName = styled.div`
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-top: 12px;
 `;
 
 export const Price = styled.div`
@@ -56,7 +84,6 @@ export const OldPrice = styled.div`
 `;
 
 export const Note = styled.div`
-  margin-top: 4px;
   font-size: 13px;
   color: orange;
 `;

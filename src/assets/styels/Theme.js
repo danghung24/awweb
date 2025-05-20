@@ -4,5 +4,7 @@ export const Theme = {
     text: "0e0e10",
     content: "#ffffff",
     logo: "#cc1212",
-    flashslider: "#2c2c2c",
+    flashslider: "#000000",
+    backgrond: "#555555",
+
 }

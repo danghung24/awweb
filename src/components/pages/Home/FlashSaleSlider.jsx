@@ -35,7 +35,7 @@ const FlashSaleSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => setTimeNow(new Date()), 1000);
     const autoSlide = setInterval(() => {
-      setStartIndex((prev) => prev + itemsPerView);
+      setStartIndex((prev) => (prev + itemsPerView >= 20 ? 0 : prev + itemsPerView));
     }, 8000);
     return () => {
       clearInterval(timer);
@@ -74,7 +74,6 @@ const FlashSaleSlider = () => {
       </Header>
 
       <SlideWrapper>
-        {/* Nút nằm ra ngoài */}
         <ArrowButton className="left" onClick={() => setStartIndex((prev) => Math.max(0, prev - itemsPerView))}>
           <Icons.ArrowLeft size={24} />
         </ArrowButton>
@@ -85,8 +84,8 @@ const FlashSaleSlider = () => {
             const finalPrice = Math.ceil((product.originalPrice * (100 - product.discountPercent)) / 100 / 1000) * 1000;
             const percent = Math.round((product.quantityLeft / product.total) * 100);
 
-            return (
-              <ProductCard key={product.id} as={isActive ? "a" : "div"} href={isActive ? product.link : undefined}>
+            const content = (
+              <>
                 <Image src={product.image} alt={product.name} />
                 {isSoldOut && <SoldOutLabel>CHÁY SUẤT</SoldOutLabel>}
                 <Title>{product.name}</Title>
@@ -97,6 +96,16 @@ const FlashSaleSlider = () => {
                 <ProgressTrack>
                   <ProgressFill style={{ width: `${percent}%` }} />
                 </ProgressTrack>
+              </>
+            );
+
+            return isActive ? (
+              <ProductCard key={product.id} as="a" href={product.link}>
+                {content}
+              </ProductCard>
+            ) : (
+              <ProductCard key={product.id} as="div">
+                {content}
               </ProductCard>
             );
           })}

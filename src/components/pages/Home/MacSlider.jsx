@@ -25,7 +25,7 @@ const products = [
 
 const itemsPerPage = 4;
 
-const IphoneSlider = () => {
+const MacSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const prev = () => {
@@ -75,4 +75,4 @@ const IphoneSlider = () => {
   );
 };
 
-export default IphoneSlider;
+export default MacSlider;
