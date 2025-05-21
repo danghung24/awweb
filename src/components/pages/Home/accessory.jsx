@@ -25,7 +25,7 @@ const products = [
 
 const itemsPerPage = 4;
 
-const IphoneSlider = () => {
+const AccSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const prev = () => {
@@ -42,7 +42,7 @@ const IphoneSlider = () => {
     <SliderWrapper>
       <TitleBarWrapper>
         <Icons.Apple size={26} color="#FFFFFF"/>
-        <TitleText>iPhone</TitleText>
+        <TitleText>Phụ Kiện </TitleText>
       </TitleBarWrapper> 
       
       <ArrowButton className="left" onClick={prev}>
@@ -75,4 +75,4 @@ const IphoneSlider = () => {
   );
 };
 
-export default IphoneSlider;
+export default AccSlider;

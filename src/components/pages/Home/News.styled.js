@@ -1,3 +1,4 @@
+// NewsSlider.styled.js
 import styled from "styled-components";
 import { Theme } from "../../../assets/styels/Theme";
 
@@ -26,19 +27,25 @@ export const TitleText = styled.h2`
   color: white;
 `;
 
+export const TimeLabel = styled.h3`
+  font-size: 14px;
+  font-weight: normal;
+  color: #aaa;
+`;
+
 export const SliderContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 `;
 
 export const Card = styled.div`
-  width: 260px;
-  height: 380px;
+  width: 360px;
+  height: 480px;
   background: #222;
   padding: 16px;
   border-radius: 16px;
-  text-align: center;
+  text-align: left;
   color: white;
   display: flex;
   flex-direction: column;
@@ -52,43 +59,20 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 125px;
-  height: 140px;
-  object-fit: contain;
-  margin: 0 auto;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
 `;
 
 export const ProductName = styled.div`
-  font-size: 14px;
-  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
 `;
 
-export const Price = styled.div`
-  font-size: 20px;
-  font-weight: bold;
-  color:rgb(246, 244, 239);
-`;
-
-export const OldPrice = styled.div`
-  font-size: 14px;
-  color: #ccc;
-  text-decoration: line-through;
-  span {
-    background: bl;
-    color: white;
-    padding: 2px 4px;
-    margin-left: 4px;
-    border-radius: 4px;
-    font-size: 12px;
-  }
-`;
-
-export const Note = styled.div`
-  font-size: 13px;
-  color: orange;
-`;
-
-export const ArrowButton = styled.button`
+export const ArrButton = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

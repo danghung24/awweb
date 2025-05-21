@@ -25,7 +25,7 @@ const products = [
 
 const itemsPerPage = 4;
 
-const IphoneSlider = () => {
+const EarSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const prev = () => {
@@ -40,11 +40,11 @@ const IphoneSlider = () => {
 
   return (
     <SliderWrapper>
-      <TitleBarWrapper>
-        <Icons.Apple size={26} color="#FFFFFF"/>
-        <TitleText>iPhone</TitleText>
-      </TitleBarWrapper> 
-      
+        <TitleBarWrapper>
+            <Icons.Apple size={26} color="#FFFFFF"/>
+            <TitleText>Tai Nghe, Loa</TitleText>
+        </TitleBarWrapper> 
+
       <ArrowButton className="left" onClick={prev}>
         <Icons.ArrowLeft />
       </ArrowButton>
@@ -75,4 +75,4 @@ const IphoneSlider = () => {
   );
 };
 
-export default IphoneSlider;
+export default EarSlider;

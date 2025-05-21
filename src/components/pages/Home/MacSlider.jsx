@@ -4,10 +4,10 @@ import {
   SliderContent,
   Card,
   Image,
-  // TitleBarWrapper,
-  // TitleText,
   ProductName,
   Price,
+  TitleBarWrapper,
+  TitleText,
   OldPrice,
   Note,
   ArrowButton
@@ -15,12 +15,12 @@ import {
 import { Icons } from "../../../assets/icons/Icons";
 
 const products = [
-  { id: 1, name: "iPhone 16 Pro Max 512GB", price: 36990000, oldPrice: 40990000, discount: 9, note: "Online giá rẻ quá", image: "/images/iphoneslider1.png", link: "" },
-  { id: 2, name: "iPhone 16 Pro 256GB", price: 28290000, oldPrice: 31990000, discount: 11, note: "Online giá rẻ quá", image: "/images/iphone-2.png", link: "" },
-  { id: 3, name: "iPhone 15 256GB", price: 18890000, oldPrice: 22990000, discount: 17, note: "Online giá rẻ quá", image: "/images/iphone-3.png", link: "" },
-  { id: 4, name: "iPhone 15 Plus 256GB", price: 22590000, oldPrice: 25990000, discount: 13, note: "Online giá rẻ quá", image: "/images/iphone-4.png", link: "" },
-  { id: 5, name: "iPhone 14 128GB", price: 15990000, oldPrice: 18990000, discount: 16, note: "Online giá rẻ quá", image: "/images/iphone-5.png", link: "" },
-  { id: 6, name: "iPhone 13 128GB", price: 13990000, oldPrice: 16990000, discount: 18, note: "Online giá rẻ quá", image: "/images/iphone-6.png", link: "" },
+  { id: 1, name: "MacBook 16 Pro Max 512GB", price: 36990000, oldPrice: 40990000, discount: 9, note: "Online giá rẻ quá", image: "/images/iphoneslider1.png", link: "" },
+  { id: 2, name: "MacBook 16 Pro 256GB", price: 28290000, oldPrice: 31990000, discount: 11, note: "Online giá rẻ quá", image: "/images/iphone-2.png", link: "" },
+  { id: 3, name: "MacBook 15 256GB", price: 18890000, oldPrice: 22990000, discount: 17, note: "Online giá rẻ quá", image: "/images/iphone-3.png", link: "" },
+  { id: 4, name: "MacBook 15 Plus 256GB", price: 22590000, oldPrice: 25990000, discount: 13, note: "Online giá rẻ quá", image: "/images/iphone-4.png", link: "" },
+  { id: 5, name: "MacBook 14 128GB", price: 15990000, oldPrice: 18990000, discount: 16, note: "Online giá rẻ quá", image: "/images/iphone-5.png", link: "" },
+  { id: 6, name: "MacBook 13 128GB", price: 13990000, oldPrice: 16990000, discount: 18, note: "Online giá rẻ quá", image: "/images/iphone-6.png", link: "" },
 ];
 
 const itemsPerPage = 4;
@@ -40,11 +40,11 @@ const MacSlider = () => {
 
   return (
     <SliderWrapper>
-      {/* <TitleBarWrapper>
-        <Icons.Apple size={24} />
-        <TitleText>iPhone</TitleText>
-      </TitleBarWrapper> */}
-
+      <TitleBarWrapper>
+        <Icons.Apple size={26} color="#FFFFFF"/>
+        <TitleText>Mac</TitleText>
+      </TitleBarWrapper> 
+    
       <ArrowButton className="left" onClick={prev}>
         <Icons.ArrowLeft />
       </ArrowButton>

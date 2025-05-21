@@ -1,4 +1,4 @@
-import { BiSearch, BiLogoTwitch, BiBell, BiSolidUserRectangle } from "react-icons/bi";
+import { BiSearch, BiLogoTwitch, BiBell, BiSolidUserRectangle, BiLogoApple } from "react-icons/bi";
 import { BiSolidBrightness, BiVideoPlus, BiLockAlt, BiLogOut,BiDotsVerticalRounded  } from "react-icons/bi";
 import { BiBarChartSquare, BiX, BiHomeAlt, BiMeteor, BiBookmarkHeart } from "react-icons/bi";
 import { BiUserCircle, BiSlideshow, BiChevronLeft, BiChevronRight, BiUser, BiSolidCircle } from "react-icons/bi";
@@ -51,6 +51,7 @@ export const Icons = {
     Expand: BiFullscreen,
     Youtube: BiLogoYoutube,
     Tiktok: BiLogoTiktok,
+    Apple: BiLogoApple,
     Discord: BiLogoDiscord,
     Live: BiBroadcast,
     Content: BiCaretRightSquare,
